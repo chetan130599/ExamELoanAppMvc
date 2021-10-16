@@ -1,0 +1,63 @@
+﻿@model IEnumerable<ExamELoanApp.Models.ApplyLoan>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Loanname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Amount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BuisnessStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Billingstatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Taxstatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Loanstatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loanname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Amount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BuisnessStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Billingstatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Taxstatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Loanstatus)
+        </td>
+        <td>
+            @Html.ActionLink("Accept", "Accept", new { id=item.ApplyLoanId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ApplyLoanId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ApplyLoanId })
+        </td>
+    </tr>
+}
+
+</table>

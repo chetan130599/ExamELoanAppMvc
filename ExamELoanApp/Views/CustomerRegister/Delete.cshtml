@@ -1,0 +1,74 @@
+﻿@model ExamELoanApp.Models.ApplyLoan
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ApplyLoan</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Loanname)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loanname)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Amount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Amount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BuisnessStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BuisnessStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Billingstatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Billingstatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Taxstatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taxstatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Loanstatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Loanstatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
